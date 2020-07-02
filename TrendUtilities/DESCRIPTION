@@ -1,0 +1,13 @@
+Package: TrendUtilities
+Type: Package
+Title: Utility functions to generate Bayesian response-randomized trials
+Version: 0.1.0
+Author: Massimiliano Russo
+Maintainer: Massimiliano Russo <m_russo@hms.harvard.edu>
+Description: Function to simulate Bayesian response multi-arm and platform trials. Function for platform trial simulations are  based on the R  ones available package AddArmsToTrial by Steffen Venz, with sometimes minimal variations. Refer to specific function for details.  
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: Rcpp (>= 1.0.3)
+LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 6.1.1
