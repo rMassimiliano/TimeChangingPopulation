@@ -25,7 +25,7 @@ The last parameter controls the randomization to the control.}
 \item{outcome_delay}{After how much time the outcome of patients \code{i} become available for the randomization procedure.}
 }
 \value{
-The function return a matrix with the same entrance as \code{potential}. The second column includs allocation of patients to arms according to the BAR procedure.
+The function return a matrix with the same entrance as \code{potential}. The second column includes allocation of patients to arms according to the BAR procedure.
 }
 \description{
 Generate a multi-arm trial under BAR

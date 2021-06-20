@@ -18,9 +18,87 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// adaptiveBiasedCoin
+mat adaptiveBiasedCoin(mat potential, double alpha, double beta, bool ret_prob);
+RcppExport SEXP _TrendUtilities_adaptiveBiasedCoin(SEXP potentialSEXP, SEXP alphaSEXP, SEXP betaSEXP, SEXP ret_probSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< mat >::type potential(potentialSEXP);
+    Rcpp::traits::input_parameter< double >::type alpha(alphaSEXP);
+    Rcpp::traits::input_parameter< double >::type beta(betaSEXP);
+    Rcpp::traits::input_parameter< bool >::type ret_prob(ret_probSEXP);
+    rcpp_result_gen = Rcpp::wrap(adaptiveBiasedCoin(potential, alpha, beta, ret_prob));
+    return rcpp_result_gen;
+END_RCPP
+}
+// bar2arms
+mat bar2arms(mat potential, double c, int M, bool ret_prob);
+RcppExport SEXP _TrendUtilities_bar2arms(SEXP potentialSEXP, SEXP cSEXP, SEXP MSEXP, SEXP ret_probSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< mat >::type potential(potentialSEXP);
+    Rcpp::traits::input_parameter< double >::type c(cSEXP);
+    Rcpp::traits::input_parameter< int >::type M(MSEXP);
+    Rcpp::traits::input_parameter< bool >::type ret_prob(ret_probSEXP);
+    rcpp_result_gen = Rcpp::wrap(bar2arms(potential, c, M, ret_prob));
+    return rcpp_result_gen;
+END_RCPP
+}
+// doublyAdaptiveBiasedCoin
+mat doublyAdaptiveBiasedCoin(mat potential, double gamma, int M, bool ret_prob);
+RcppExport SEXP _TrendUtilities_doublyAdaptiveBiasedCoin(SEXP potentialSEXP, SEXP gammaSEXP, SEXP MSEXP, SEXP ret_probSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< mat >::type potential(potentialSEXP);
+    Rcpp::traits::input_parameter< double >::type gamma(gammaSEXP);
+    Rcpp::traits::input_parameter< int >::type M(MSEXP);
+    Rcpp::traits::input_parameter< bool >::type ret_prob(ret_probSEXP);
+    rcpp_result_gen = Rcpp::wrap(doublyAdaptiveBiasedCoin(potential, gamma, M, ret_prob));
+    return rcpp_result_gen;
+END_RCPP
+}
+// randomizedPlayTheWinner
+mat randomizedPlayTheWinner(mat potential, int beta, int alpha, int M, bool ret_prob);
+RcppExport SEXP _TrendUtilities_randomizedPlayTheWinner(SEXP potentialSEXP, SEXP betaSEXP, SEXP alphaSEXP, SEXP MSEXP, SEXP ret_probSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< mat >::type potential(potentialSEXP);
+    Rcpp::traits::input_parameter< int >::type beta(betaSEXP);
+    Rcpp::traits::input_parameter< int >::type alpha(alphaSEXP);
+    Rcpp::traits::input_parameter< int >::type M(MSEXP);
+    Rcpp::traits::input_parameter< bool >::type ret_prob(ret_probSEXP);
+    rcpp_result_gen = Rcpp::wrap(randomizedPlayTheWinner(potential, beta, alpha, M, ret_prob));
+    return rcpp_result_gen;
+END_RCPP
+}
+// barBattle2arms
+mat barBattle2arms(mat potential, double alpha, double beta, int M, double minProb, bool ret_prob);
+RcppExport SEXP _TrendUtilities_barBattle2arms(SEXP potentialSEXP, SEXP alphaSEXP, SEXP betaSEXP, SEXP MSEXP, SEXP minProbSEXP, SEXP ret_probSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< mat >::type potential(potentialSEXP);
+    Rcpp::traits::input_parameter< double >::type alpha(alphaSEXP);
+    Rcpp::traits::input_parameter< double >::type beta(betaSEXP);
+    Rcpp::traits::input_parameter< int >::type M(MSEXP);
+    Rcpp::traits::input_parameter< double >::type minProb(minProbSEXP);
+    Rcpp::traits::input_parameter< bool >::type ret_prob(ret_probSEXP);
+    rcpp_result_gen = Rcpp::wrap(barBattle2arms(potential, alpha, beta, M, minProb, ret_prob));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_TrendUtilities_posterior_with_control", (DL_FUNC) &_TrendUtilities_posterior_with_control, 1},
+    {"_TrendUtilities_adaptiveBiasedCoin", (DL_FUNC) &_TrendUtilities_adaptiveBiasedCoin, 4},
+    {"_TrendUtilities_bar2arms", (DL_FUNC) &_TrendUtilities_bar2arms, 4},
+    {"_TrendUtilities_doublyAdaptiveBiasedCoin", (DL_FUNC) &_TrendUtilities_doublyAdaptiveBiasedCoin, 4},
+    {"_TrendUtilities_randomizedPlayTheWinner", (DL_FUNC) &_TrendUtilities_randomizedPlayTheWinner, 5},
+    {"_TrendUtilities_barBattle2arms", (DL_FUNC) &_TrendUtilities_barBattle2arms, 6},
     {NULL, NULL, 0}
 };
 
