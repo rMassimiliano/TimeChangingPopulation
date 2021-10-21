@@ -2,9 +2,8 @@
 # Inference in response-adaptive clinical trials when the enrolled population varies over time
 
 This repository contains an R package including code used to generate
-and analyze clinical trials in the paper *Inference in response-adaptive
-clinical trials when the enrolled population varies over time*. The
-manuscript is available upon request.
+and analyze clinical trials in the paper [Inference in response-adaptive
+clinical trials when the enrolled population varies over time](https://onlinelibrary.wiley.com/doi/10.1111/biom.13582). 
 
 The package <tt>TrendUtilities</tt> can be installed with the following
 code
